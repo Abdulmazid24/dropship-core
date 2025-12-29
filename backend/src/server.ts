@@ -6,6 +6,7 @@ import rateLimit from 'express-rate-limit';
 import { env } from './config/env';
 import { connectDatabase } from './config/database';
 import { errorHandler } from './shared/middleware/error.middleware';
+import authRoutes from './modules/auth/auth.routes';
 
 const app: Application = express();
 
@@ -41,6 +42,9 @@ app.get('/health', (_req: Request, res: Response) => {
         timestamp: new Date().toISOString(),
     });
 });
+
+// API routes
+app.use('/api/auth', authRoutes);
 
 // API routes will be added here
 app.get('/api', (_req: Request, res: Response) => {
