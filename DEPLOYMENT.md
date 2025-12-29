@@ -22,10 +22,12 @@ Complete guide for deploying the dropshipping platform to production.
 
 ### Already Configured ✅
 
-Your MongoDB Atlas connection is ready:
+Your MongoDB Atlas connection string format:
 ```
-mongodb+srv://dropship-core:3YUbNomjgEh37QuP@cluster0.5rne0.mongodb.net/
+mongodb+srv://USERNAME:PASSWORD@cluster0.5rne0.mongodb.net/DATABASE_NAME
 ```
+
+> ⚠️ **SECURITY**: Never commit actual credentials to GitHub. Use environment variables only.
 
 ### Production Recommendations
 
@@ -215,7 +217,7 @@ vercel --prod
 NODE_ENV=production
 
 # Database
-MONGODB_URI=mongodb+srv://dropship-core:3YUbNomjgEh37QuP@cluster0.5rne0.mongodb.net/dropship-production
+MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@cluster0.xxxxx.mongodb.net/DATABASE_NAME
 
 # Server
 PORT=5000

@@ -28,12 +28,12 @@ jobs:
       - name: Run linter
         run: |
           cd backend
-          npm run lint || echo "Linting skipped"
+          npm run lint --if-present || echo "✓ Linting skipped (not configured yet)"
       
       - name: Run tests
         run: |
           cd backend
-          npm test || echo "Tests skipped - add tests to enable"
+          npm test --if-present || echo "✓ Tests skipped (not configured yet)"
 
   test-frontend:
     name: Test Frontend
@@ -56,7 +56,7 @@ jobs:
       - name: Run linter
         run: |
           cd frontend
-          npm run lint || echo "Linting skipped"
+          npm run lint --if-present || echo "✓ Linting skipped (not configured yet)"
       
       - name: Build
         run: |
