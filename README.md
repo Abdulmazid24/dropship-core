@@ -296,6 +296,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Abdul Mazid**
 - GitHub: [@Abdulmazid24](https://github.com/Abdulmazid24)
+- Portfolio: [abdulmazid-portfolio.vercel.app](https://abdulmazid-portfolio.vercel.app/)
+- Email: abdulmazid24@gmail.com
 
 ---
 
