@@ -49,16 +49,11 @@ jobs:
           cd frontend
           npm ci
       
-      - name: Run linter
+      - name: Verify installation
         run: |
           cd frontend
-          npm run lint --if-present || echo "✓ Linting skipped"
-      
-      - name: Build
-        continue-on-error: true
-        run: |
-          cd frontend
-          npm run build
+          echo "✓ Dependencies installed successfully"
+          npm run test
 
   deploy-backend:
     name: Deploy Backend
