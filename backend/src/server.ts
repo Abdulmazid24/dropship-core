@@ -11,6 +11,9 @@ import productRoutes from './modules/product/product.routes';
 import variantRoutes from './modules/variant/variant.routes';
 import cartRoutes from './modules/cart/cart.routes';
 import supplierRoutes from './modules/supplier/supplier.routes';
+import paymentRoutes from './modules/payment/payment.routes';
+import orderRoutes from './modules/order/order.routes';
+import { initializePaymentProviders } from './modules/payment/payment.service';
 
 const app: Application = express();
 
@@ -53,6 +56,8 @@ app.use('/api/products', productRoutes);
 app.use('/api/variants', variantRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/suppliers', supplierRoutes);
+app.use('/api/payment', paymentRoutes);
+app.use('/api/orders', orderRoutes);
 app.get('/api', (_req: Request, res: Response) => {
     res.json({
         success: true,
@@ -84,6 +89,9 @@ const PORT = parseInt(env.PORT, 10);
 
 const startServer = async () => {
     try {
+        // Initialize payment providers
+        initializePaymentProviders();
+
         // Connect to database
         await connectDatabase();
 
