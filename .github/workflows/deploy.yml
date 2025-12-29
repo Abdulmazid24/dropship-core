@@ -52,7 +52,7 @@ jobs:
       - name: Run linter
         run: |
           cd frontend
-          npm run lint --if-present || echo "✓ Linting skipped (not configured yet)"
+          npm run lint --if-present || echo "✓ Linting skipped"
       
       - name: Build
         run: |
