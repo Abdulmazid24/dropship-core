@@ -7,6 +7,10 @@ import { env } from './config/env';
 import { connectDatabase } from './config/database';
 import { errorHandler } from './shared/middleware/error.middleware';
 import authRoutes from './modules/auth/auth.routes';
+import productRoutes from './modules/product/product.routes';
+import variantRoutes from './modules/variant/variant.routes';
+import cartRoutes from './modules/cart/cart.routes';
+import supplierRoutes from './modules/supplier/supplier.routes';
 
 const app: Application = express();
 
@@ -45,8 +49,10 @@ app.get('/health', (_req: Request, res: Response) => {
 
 // API routes
 app.use('/api/auth', authRoutes);
-
-// API routes will be added here
+app.use('/api/products', productRoutes);
+app.use('/api/variants', variantRoutes);
+app.use('/api/cart', cartRoutes);
+app.use('/api/suppliers', supplierRoutes);
 app.get('/api', (_req: Request, res: Response) => {
     res.json({
         success: true,
