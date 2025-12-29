@@ -22,12 +22,12 @@ Complete guide for deploying the dropshipping platform to production.
 
 ### Already Configured ✅
 
-Your MongoDB Atlas connection string format:
+MongoDB Atlas connection string format:
 ```
-mongodb+srv://USERNAME:PASSWORD@cluster0.5rne0.mongodb.net/DATABASE_NAME
+mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@YOUR_CLUSTER.mongodb.net/YOUR_DATABASE
 ```
 
-> ⚠️ **SECURITY**: Never commit actual credentials to GitHub. Use environment variables only.
+> ⚠️ **SECURITY**: Keep credentials in `.env` files only. Never commit to GitHub.
 
 ### Production Recommendations
 
