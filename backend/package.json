@@ -8,7 +8,9 @@
         "build": "tsc",
         "start": "node dist/server.js",
         "lint": "eslint src --ext .ts",
-        "format": "prettier --write \"src/**/*.ts\""
+        "format": "prettier --write \"src/**/*.ts\"",
+        "seed": "tsx scripts/seed.ts",
+        "test": "echo \"No tests configured yet\" && exit 0"
     },
     "keywords": [
         "dropshipping",

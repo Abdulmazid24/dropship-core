@@ -20,14 +20,12 @@ Complete guide for deploying the dropshipping platform to production.
 
 ## 1. **Database Deployment (MongoDB Atlas)**
 
-### Already Configured ✅
+### MongoDB Atlas Setup
 
-MongoDB Atlas connection string format:
-```
-mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@YOUR_CLUSTER.mongodb.net/YOUR_DATABASE
-```
+**Connection String Format:**  
+`mongodb+srv://` + `username` + `:` + `password` + `@` + `your-cluster` + `.mongodb.net/` + `database-name`
 
-> ⚠️ **SECURITY**: Keep credentials in `.env` files only. Never commit to GitHub.
+> ⚠️ **SECURITY**: Store credentials in `.env` files only. Never commit to version control.
 
 ### Production Recommendations
 
@@ -217,7 +215,7 @@ vercel --prod
 NODE_ENV=production
 
 # Database
-MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@cluster0.xxxxx.mongodb.net/DATABASE_NAME
+MONGODB_URI=<your-mongodb-atlas-connection-string>
 
 # Server
 PORT=5000
